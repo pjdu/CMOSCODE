@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/draw_bg_app"
+              android:orientation="vertical">
+
+    <LinearLayout style="@style/layout_title">
+
+        <TextView
+                style="@style/text_title"
+                android:gravity="center"
+                android:text="@string/common_account_safe"/>
+    </LinearLayout>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dip"
+                    android:background="@drawable/draw_bg_round"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="1dip">
+
+                <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dip"
+                        android:contentDescription="@string/common_account_safe"
+                        android:src="@drawable/ic_users"/>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    <TextView
+                            android:id="@+id/tv_user_name"
+                            style="@style/text_default"
+                            android:gravity="left|center_vertical"
+                            android:text="@string/app_name"/>
+
+                    <TextView
+                            android:id="@+id/tv_user_id"
+                            style="@style/text_default"
+                            android:gravity="left|center_vertical"
+                            android:text="@string/app_name"
+                            android:textColor="@color/main_app"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/btn_changepwd"
+                    style="@style/btn_green"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/common_changepwd"/>
+
+            <Button
+                    android:id="@+id/btn_exitaccount"
+                    style="@style/btn_red"
+                    android:layout_marginTop="15dip"
+                    android:text="@string/common_clearaccount"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

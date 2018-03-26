@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_app"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"></include>
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <TextView
+            style="@style/text_default"
+            android:layout_width="match_parent"
+            android:background="@drawable/draw_bg_group_normal"
+            android:gravity="left|center"
+            android:paddingBottom="8dp"
+            android:paddingLeft="6dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:text="@string/inset_bs"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_insetbs"
+            android:layout_width="match_parent"
+            android:layout_height="48dip"
+            android:background="@drawable/draw_bg_list"
+            android:drawableRight="@drawable/ic_into"
+            android:gravity="left|center"
+            android:padding="5dip"
+            android:textColor="@color/black" />
+
+        <TextView
+            style="@style/text_default"
+            android:layout_width="match_parent"
+            android:background="@drawable/draw_bg_group_normal"
+            android:gravity="left|center"
+            android:paddingBottom="8dp"
+            android:paddingLeft="6dp"
+            android:paddingTop="8dp"
+            android:singleLine="true"
+            android:text="@string/inset_cell_rru"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_insetcell"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/draw_bg_list"
+            android:drawableRight="@drawable/ic_into"
+            android:gravity="left|center"
+            android:padding="5dip"
+            android:textColor="@color/black" />
+    </LinearLayout>
+    <!-- <TextView -->
+    <!-- style="@style/text_default" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:background="@drawable/draw_bg_group_normal" -->
+    <!-- android:gravity="left|center" -->
+    <!-- android:paddingBottom="8dp" -->
+    <!-- android:paddingLeft="6dp" -->
+    <!-- android:paddingTop="8dp" -->
+    <!-- android:singleLine="true" -->
+    <!-- android:text="@string/it_bs_new" -->
+    <!-- android:textStyle="bold" /> -->
+
+
+    <!-- <ScrollView -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="match_parent" -->
+    <!-- android:layout_marginTop="8dp" > -->
+
+
+    <!-- <LinearLayout -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="50dip" -->
+    <!-- android:background="@drawable/draw_bg_group_normal" -->
+    <!-- android:gravity="left|center" -->
+    <!-- android:orientation="vertical" > -->
+
+
+    <!-- 新 基站巡检 -->
+
+
+    <!-- <TextView -->
+    <!-- style="@style/text_default" -->
+    <!-- android:gravity="left|center" -->
+    <!-- android:paddingLeft="5dp" -->
+    <!-- android:text="@string/it_bs_new" -->
+    <!-- android:textStyle="bold" /> -->
+
+
+    <!-- <ListView -->
+    <!-- android:id="@+id/lv_new" -->
+    <!-- style="@style/list_default" -->
+    <!-- android:visibility="gone" /> -->
+
+
+    <!-- 安全隐患 -->
+
+
+    <!-- <TextView -->
+    <!-- style="@style/text_default" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:background="@drawable/draw_bg_group_normal" -->
+    <!-- android:gravity="left|center" -->
+    <!-- android:paddingBottom="8dp" -->
+    <!-- android:paddingLeft="6dp" -->
+    <!-- android:paddingTop="8dp" -->
+    <!-- android:singleLine="true" -->
+    <!-- android:text="@string/it_trouble" -->
+    <!-- android:textStyle="bold" /> -->
+
+
+    <!-- <ListView -->
+    <!-- android:id="@+id/lv_hidden" -->
+    <!-- style="@style/list_default" -->
+    <!-- android:visibility="gone" /> -->
+    <!-- </LinearLayout> -->
+    <!-- </ScrollView> -->
+
+    <TabHost
+        android:id="@+id/tab_main_new"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="50dip"
+                android:orientation="horizontal" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/layout_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_state_new"
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_green_light"
+                        android:gravity="center"
+                        android:text="@string/common_request"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/searchEt_new"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="50dp"
+                        android:hint="输入名称查询"
+                        android:inputType="none" />
+
+                    <ListView
+                        android:id="@+id/lv_new"
+                        style="@style/list_default"
+                        android:layout_marginTop="100dp"
+                        android:dividerHeight="0dp"
+                        android:listSelector="@color/opacity"
+                        android:visibility="gone"></ListView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/radiogroup_new"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/btn_new_telecom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/draw_btn_green2"
+                                android:checked="true"
+                                android:text="电信产权" />
+
+                            <RadioButton
+                                android:id="@+id/btn_new_tower"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/draw_btn_green2"
+                                android:text="铁塔产权" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layout_rru"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_state_rru"
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_green_light"
+                        android:gravity="center"
+                        android:text="@string/common_request"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/searchEt_rru"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="50dp"
+                        android:hint="输入名称查询"
+                        android:inputType="none" />
+
+                    <ListView
+                        android:id="@+id/lv_rru"
+                        style="@style/list_default"
+                        android:layout_marginTop="100dp"
+                        android:dividerHeight="0dp"
+                        android:listSelector="@color/opacity"
+                        android:visibility="gone"></ListView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <RadioGroup
+                            android:id="@+id/radiogroup_rru"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/btn_rru_telecom"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/draw_btn_green2"
+                                android:checked="true"
+                                android:text="电信产权" />
+
+                            <RadioButton
+                                android:id="@+id/btn_rru_tower"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/draw_btn_green2"
+                                android:text="铁塔产权" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layout_inspected"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_state_inspected"
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_green_light"
+                        android:gravity="center"
+                        android:text="@string/common_request"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/searchEt_inpected"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="输入名称查询"
+                        android:inputType="none" />
+
+                    <ListView
+                        android:id="@+id/lv_inspected"
+                        style="@style/list_default"
+                        android:layout_marginTop="50dp"
+                        android:dividerHeight="0dp"
+                        android:listSelector="@color/opacity"
+                        android:visibility="gone"></ListView>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layout_hidden"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tv_state_hidden"
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_green_light"
+                        android:gravity="center"
+                        android:text="@string/common_request"
+                        android:visibility="visible" />
+
+                    <EditText
+                        android:id="@+id/searchEt_hidden"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="输入名称查询"
+                        android:inputType="none" />
+
+                    <ListView
+                        android:id="@+id/lv_hidden"
+                        style="@style/list_default"
+                        android:layout_marginTop="50dp"
+                        android:dividerHeight="0dp"
+                        android:listSelector="@color/opacity"
+                        android:visibility="gone"></ListView>
+                </FrameLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

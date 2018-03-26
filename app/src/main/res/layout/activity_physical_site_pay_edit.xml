@@ -1,0 +1,719 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/main"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/draw_bg_app"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/layout_dsc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_title"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_deep"
+                android:drawableLeft="@drawable/ic_br_next"
+                android:gravity="left|center"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="站址配套信息"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="交付日期"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="默认当前时间"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_item_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:inputType="text"/>
+
+                    <Button
+                        android:id="@+id/btn_item_date"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableLeft="@drawable/ic_top_right_expand"
+                        android:padding="5dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="新建站址电信站址编码"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_item_physical_site_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:inputType="text"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="新建站址铁塔公司物理站址编码"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_item_tower_physical_site_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:inputType="text"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="是否验收"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/sp_is_or_not_check"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"></Spinner>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="机房产权"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/sp_room_property"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"></Spinner>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="机房共享信息"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对(需拍照)"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_item_room_share_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:inputType="text"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="塔桅产权"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Spinner
+                        android:id="@+id/sp_tower_pole_property"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"></Spinner>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="塔桅类型"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Spinner
+                        android:id="@+id/sp_tower_pole_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"></Spinner>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="塔桅共享信息"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/sp_tower_pole_share_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"></Spinner>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="供电信息"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对(需拍照)"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_item_supply_power_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:inputType="text"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="干接点/动环信息"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <Spinner
+                        android:id="@+id/sp_dry_contact_info"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"></Spinner>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_title"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_deep"
+                android:drawableLeft="@drawable/ic_br_next"
+                android:gravity="left|center"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="自建站址信息"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="转供电合同(协议)号"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对(电信自建站点填写)"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_item_supply_power_contract"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:inputType="text"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="土地及房屋租赁协议号"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对(电信自建站点填写)"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_item_land_protocol"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:inputType="text"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="left|center"
+                    android:text="租赁合同甲方主体名称"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="left|center"
+                    android:text="站点信息，现场核对(电信自建站点填写)"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_item_tenancy_contract"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:inputType="text"/>
+
+                    <Button
+                        android:id="@+id/btn_item_tenancy_contract"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableLeft="@drawable/ic_top_right_expand"
+                        android:padding="5dp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linear_btn_assets_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/bg_btn_panle"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_img_assets"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/draw_btn_photo"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/btn_red"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text="@string/common_sub"/>
+    </LinearLayout>
+
+</LinearLayout>

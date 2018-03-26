@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimaryLight">#5677fc</color>
+    <color name="colorOrangeLight">#FF8200</color>
+    <!--天翼优客-->
+    <color name="opacity">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="black1">#111111</color>
+    <color name="bg_app">#f0f0f0</color>
+    <color name="main_app">#0099FF</color>
+    <color name="gray">#cccccc</color>
+    <color name="blackl1">#303030</color>
+    <color name="black5">#555555</color>
+    <color name="login_stro_color">#678293</color>
+    <color name="green_deep">#DCDCDC</color>
+    <color name="btn_nor_t">#5fFFA615</color>
+    <color name="btn_nor_n">#5f000000</color>
+    <color name="pick">#fcd3c9</color>
+    <color name="gray_1">#888888</color>
+    <color name="red_warn">#F3850F</color>
+    <color name="red">#F0000F</color>
+    <color name="blue">#02befc</color>
+    <color name="black_op1">#aa000000</color>
+    <!-- for trouble -->
+    <color name="bsstate_critical">#df2d3b</color>
+    <color name="bsstate_major">#e69600</color>
+    <color name="bsstate_minor">#e7f500</color>
+    <color name="bsstate_warning">#5b80ff</color>
+    <color name="bsstate_normal">#54c521</color>
+    <color name="blue_deep">#174497</color>
+
+    <!-- for new site -->
+    <color name="bsstate_new_checking">#494949</color>
+    <color name="bsstate_new_applying">#7e927e</color>
+    <color name="bsstate_new_paying">#70ab62</color>
+
+    <color name="action_ripple_blue">#91a7ff</color>
+    <color name="action_bg_blue">#5677fc</color>
+
+    <!--  for WCollectLte -->
+    <color name="black_bg_tabw">#393b43</color>
+    <color name="blue1">#40b1e5</color>
+    <color name="blue2">#2084cc</color>
+    <color name="blue3">#f4fbff</color>
+    <color name="yellow_price">#f5850c</color>
+    <color name="white_ef">#efefef</color>
+    <color name="yellow">#FFCC66</color>
+    <color name="yellow_deep">#FF9900</color>
+    <color name="black_op2">#aad0d0d0</color>
+    <color name="white_op1">#aaffffff</color>
+    <color name="tv_color">#DCDCDC</color>
+    <color name="tv_color1">#F8F8FF</color>
+    <color name="text_bg">#f4fbff</color>
+    <color name="show_text_bg">#881c262c</color>
+
+    <color name="TabbarTitleColor">#FFF</color>
+    <color name="white2">#f2f2f2</color>
+    <color name="white_d0">#d0d0d0</color>
+    <color name="black2">#222222</color>
+    <color name="black3">#333333</color>
+    <color name="black8">#888888</color>
+    <color name="blue_light">#7ec7fe</color>
+    <color name="black_deep">#000000</color>
+
+    <color name="color_accent">#7c4dff</color>
+    <color name="color_success">#3CCD88</color>
+    <color name="color_error">#f44336</color>
+
+    <color name="background_card">#fff</color>
+    <color name="text_white_87">#deFFFFFF</color>
+    <color name="text_black_87">#de000000</color>
+
+
+    <color name="color_cccccc">#CCCCCC</color>
+    <color name="color_666666">#666666</color>
+    <color name="color_888888">#888888</color>
+    <color name="color_7ecef4">#7ECEF4</color>
+    <color name="color_1b88ee">#1B88EE</color>
+    <color name="color_bbbbbb">#BBBBBB</color>
+    <color name="color_ff8801">#FF8801</color>
+    <color name="color_ffac01">#FFAC01</color>
+    <color name="color_f8f8f8">#F8F8F8</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_555555">#555555</color>
+    <color name="color_f45c50">#F45C50</color>
+    <color name="color_f5f4f6">#F5F4F6</color>
+    <color name="color_d7d7d8">#D7D7D8</color>
+    <color name="color_7f8393">#7F8393</color>
+    <color name="color_2f99fb">#2F99FB</color>
+    <color name="color_acd0fd">#ACD0FD</color>
+    <color name="color_efefef">#EFEFEF</color>
+    <color name="color_ededed">#EDEDED</color>
+    <color name="color_e5e5e5">#E5E5E5</color>
+    <color name="color_dddddd">#DDDDDD</color>
+    <color name="color_55ccfd">#55CCFD</color>
+    <color name="color_2ed573">#2ED573</color>
+    <color name="color_f4f4f4">#F4F4F4</color>
+
+    <color name="actionbar_opacity">#33000000</color>
+</resources>

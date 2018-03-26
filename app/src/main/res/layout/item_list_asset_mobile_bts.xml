@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by AndyHua on 2017/8/1.
+  ~ Copyright © 2017年 ytf. All rights reserved.
+  ~
+  ~ Last Modified on 2017-07-26 15:16:17.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/list_circle_bg"
+              android:orientation="vertical"
+              android:paddingBottom="16dp"
+              android:paddingEnd="16dp"
+              android:paddingStart="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/res_ass_code"
+            style="@style/text_default"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:minHeight="48dp"
+            android:singleLine="false"
+            android:text="基站名称:11_BS8800_KM官渡GD六甲飞虎大道广福路口_WATD_ZCT"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/res_city"
+            style="@style/text_default"
+            android:layout_weight="0"
+            android:layout_gravity="bottom"
+            android:gravity="end|center_vertical"
+            android:text="昆明市"
+            android:textColor="#FF9529"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EFEFEF"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/res_ass_name"
+            style="@style/text_default"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="资产卡片编号:"
+            android:textColor="@color/color_888888"
+            android:textSize="16sp"/>
+
+        <TextView
+            style="@style/text_default"
+            android:layout_weight="0"
+            android:gravity="end|center_vertical"
+            android:text="待盘点"
+            android:textColor="@color/color_2f99fb"
+            android:textSize="16sp"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/res_code"
+            style="@style/text_default"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="电子序列号:"
+            android:textColor="@color/color_888888"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginRight="15dp"
+            android:src="@mipmap/asset_next"/>
+        <TextView
+            style="@style/text_default"
+            android:layout_weight="0"
+            android:gravity="end|center_vertical"
+            android:text="昆明市"
+            android:textColor="@color/color_2ed573"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/res_addr"
+            style="@style/text_default"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="32dp"
+            android:layout_weight="1"
+            android:gravity="start|center_vertical"
+            android:text="安装位置:昆明官渡GD六甲飞虎大道广福路口"
+            android:textColor="@color/color_bbbbbb"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/txt_assets_ins"
+            style="@style/text_default"
+            android:layout_weight="0"
+            android:gravity="end|center_vertical"
+            android:text="待盘点"
+            android:textColor="#C03033"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

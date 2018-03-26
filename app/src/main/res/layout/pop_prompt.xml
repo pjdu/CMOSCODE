@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:minHeight="60dp"
+              android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/tv_prompt_title"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_text_panle"
+            android:gravity="left|center"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:text="@string/common_tips"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    <TextView
+            android:id="@+id/tv_prompt_msg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+    <Button
+            android:id="@+id/btn_prompt_sure"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/draw_bg_list_round"
+            android:text="@string/common_sure"
+            android:textColor="@color/red_warn"
+            android:textSize="15sp"/>
+
+    <Button
+            android:id="@+id/btn_prompt_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/draw_bg_list_round"
+            android:text="@string/common_cancel"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/draw_bg_app"
+              android:orientation="vertical">
+
+    <!--<LinearLayout style="@style/layout_title">
+
+        <TextView
+                style="@style/text_title"
+                android:gravity="center"
+                android:text="@string/common_about"/>
+    </LinearLayout>-->
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:scrollbars="none">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/download_qr"/>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:padding="2dp"
+                    android:text="@string/common_qr"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+            <TextView
+                    style="@style/text_default"
+                    android:layout_margin="5dp"
+                    android:lineSpacingExtra="5dip"
+                    android:text="@string/login_intro"/>
+
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/logo"/>
+
+            <TextView
+                    style="@style/text_default"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="5dip"
+                    android:text="@string/app_copy"
+                    android:textColor="@color/gray"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

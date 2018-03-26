@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_app"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center">
+
+    <include
+        android:id="@+id/tool_top"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/tool_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_btn_panle"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_close"
+            style="@style/btn_white"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:text="@string/common_close"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/btn_red"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:text="@string/common_submit"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tool_bottom"
+        android:layout_below="@id/tool_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="资产卡片编号"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="设备信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_tower_assets_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_tower_assets_no"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/tower_saoma"
+                        android:padding="5dp"
+                        android:text="扫码"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="电子序列号(S/N)"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="设备信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_tower_serial_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_tower_serial_id"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/tower_saoma"
+                        android:padding="5dp"
+                        android:text="扫码"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="铁塔维护等级"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="设备信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_tower_mian_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_tower_main_level"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="铁塔共享家数"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="设备信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_tower_share_sum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="number"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_tower_share_sum"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="是否购买铁塔发电"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="设备信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_tower_buy_tower"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_tower_buy_tower"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="最高天线挂高(米)"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="设备信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_tower_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_tower_height"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="天线类型"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="设备信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_tower_aerial_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_tower_aerial_type"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="天线方位角A(度)"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="设备信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_tower_angle_a"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_tower_angle_a"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击测量"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="天线方位角B(度)"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="设备信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_tower_angle_b"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_tower_angle_b"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击测量"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="天线方位角C(度)"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="设备信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_tower_angle_c"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_tower_angle_c"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击测量"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/btn_assets_link"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_above="@id/tool_bottom"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/icon_assets_link"
+        tools:ignore="ContentDescription"/>
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+    <include layout="@layout/toolbar"/>
+
+<!--    <LinearLayout style="@style/layout_title">
+
+        <TextView
+                style="@style/text_title"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/box_lac"/>
+
+        <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="0"
+                android:background="@drawable/divi"/>
+
+        <ImageButton
+                android:id="@+id/btn_mapModel"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/draw_btn_header"
+                android:contentDescription="@string/box_lac"
+                android:src="@drawable/ic_eye"/>
+    </LinearLayout>-->
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/draw_bg_group_normal"
+            android:gravity="left|center"
+            android:orientation="vertical">
+
+        <TextView
+                android:id="@+id/tv_bs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_cell"
+                android:gravity="left|center"
+                android:padding="2dp"
+                android:singleLine="false"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+
+        <TextView
+                android:id="@+id/text_dv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:textSize="13sp"/>
+    </LinearLayout>
+
+    <com.baidu.mapapi.map.MapView
+            android:id="@+id/mapview_test"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:clickable="true"/>
+
+</LinearLayout>

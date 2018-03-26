@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <cn.com.chinaccs.datasite.main.widget.pager.HorizontalPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <GridView
+            android:id="@+id/grid_toolbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/draw_bg_app"
+            android:columnWidth="100dip"
+            android:gravity="center"
+            android:horizontalSpacing="5dip"
+            android:numColumns="3"
+            android:paddingTop="10dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dip" />
+    </cn.com.chinaccs.datasite.main.widget.pager.HorizontalPager>
+
+</LinearLayout>

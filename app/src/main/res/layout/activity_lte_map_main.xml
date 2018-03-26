@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/map_view_main_layout" />
+
+    <include layout="@layout/toolbar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/layout_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="0.5dp"
+            android:background="@color/blue2"
+            android:gravity="left|center_vertical"
+            android:padding="2dp"
+            android:text="@string/sg_tm"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/layout_signal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="left|center"
+            android:orientation="horizontal" />
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/action_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        fab:menu_backgroundColor="#ccffffff"
+        fab:menu_colorNormal="#1565C0"
+        fab:menu_colorPressed="#2272CD"
+        fab:menu_colorRipple="#62B2FF"
+        fab:menu_fab_size="mini"
+        fab:menu_icon="@drawable/ic_menu"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+        fab:menu_openDirection="down">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/signal_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tab_signal_selected"
+            fab:fab_label="网络信令"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/speed_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tab_speed_selected"
+            fab:fab_label="网速测速"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/busi_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_tab_busi_selected"
+            fab:fab_label="网页测速"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/video_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_video"
+            fab:fab_label="视频测速"
+            fab:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+    <ImageButton
+        android:id="@+id/requestLocBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="45dip"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/ic_icon_background" />
+</RelativeLayout>

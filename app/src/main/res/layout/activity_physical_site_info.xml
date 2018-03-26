@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+    <cn.com.chinaccs.datasite.main.widget.AnimatedExpandableListView
+        android:id="@+id/physical_site_list"
+        style="@style/list_default"
+        android:layout_margin="5dp"
+        android:dividerHeight="2dp"
+        android:listSelector="@color/opacity" />
+</LinearLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/draw_bg_app"
+              android:orientation="vertical">
+
+    <LinearLayout style="@style/layout_title">
+
+        <TextView
+                style="@style/text_title"
+                android:layout_weight="1"
+                android:text="@string/it_bs_new_info"/>
+        <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="0"
+                android:background="@drawable/divi"/>
+
+        <ImageButton
+                android:id="@+id/btn_mapCenter"
+                android:layout_width="48dp"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="1dp"
+                android:background="@drawable/draw_btn_header"
+                android:contentDescription="@string/box_lac"
+                android:src="@drawable/ic_eye"/>
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/tv_loc_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/draw_bg_group_normal"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@color/main_app"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/draw_input"
+            android:orientation="horizontal">
+        <EditText
+                android:id="@+id/et_loc_name"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:hint="请输入您要查看的地域名称或基站名称"
+                android:layout_weight="1"
+                android:singleLine="true"/>
+
+        <Button
+                android:id="@+id/btn_datasite_query"
+                android:layout_width="45dip"
+                android:layout_height="45dip"
+                android:layout_margin="1dip"
+                android:layout_weight="0"
+                android:background="@drawable/draw_btn_search"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/green_deep"
+            android:paddingBottom="0.5dp"
+            android:visibility="gone">
+
+        <TextView
+                android:id="@+id/tv_lng"
+                style="@style/text_default"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="left|center"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:text="@string/float_default"/>
+
+        <TextView
+                android:id="@+id/tv_lat"
+                style="@style/text_default"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="0.5dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="left|center"
+                android:padding="5dp"
+                android:singleLine="false"
+                android:text="@string/float_default"/>
+    </LinearLayout>
+
+    <com.baidu.mapapi.map.MapView
+            android:id="@+id/mv_sgin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clickable="true"/>
+
+</LinearLayout>

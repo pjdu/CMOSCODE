@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_list"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="left|center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/question_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0"
+            android:gravity="left|center"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/text_default"
+            android:layout_margin="5dp"
+            android:gravity="left"
+            android:text="@string/question_wen"
+            android:textColor="@color/green_deep" />
+
+        <TextView
+            android:id="@+id/question_describ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="left|center"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <View
+            android:id="@+id/question_statues"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/quetion_wgb"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/anwser_count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="right|center"
+            android:textColor="@color/green_deep" />
+    </LinearLayout>
+
+</LinearLayout>

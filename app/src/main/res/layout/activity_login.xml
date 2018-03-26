@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/draw_bg_app"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorOrangeLight"
+            android:orientation="vertical">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/logo"/>
+
+        <TextView
+                style="@style/text_title"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="left"
+                android:text="@string/app_name"/>
+    </LinearLayout>
+
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/green_deep"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dip"
+                    android:layout_marginLeft="10dip"
+                    android:layout_marginRight="10dip"
+                    android:layout_marginTop="20dip"
+                    android:background="@drawable/bg_round"
+                    android:stretchColumns="1">
+
+                <TableRow
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginTop="20dip">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dip"
+                            android:layout_column="0"
+                            android:layout_marginLeft="15dip"
+                            android:gravity="right"
+                            android:text="@string/login_user"
+                            android:textColor="@color/login_stro_color"/>
+
+                    <EditText
+                            android:id="@+id/edit_login_user"
+                            style="@style/edit"
+                            android:layout_column="1"
+                            android:layout_marginRight="20dip"
+                            android:hint="@string/login_hint_u"
+                            android:inputType="number"/>
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dip">
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dip"
+                            android:layout_column="0"
+                            android:layout_marginLeft="15dip"
+                            android:gravity="right"
+                            android:text="@string/login_pwd"
+                            android:textColor="@color/login_stro_color"/>
+
+                    <EditText
+                            android:id="@+id/edit_login_pwd"
+                            style="@style/edit"
+                            android:layout_column="1"
+                            android:layout_marginRight="20dip"
+                            android:hint="@string/login_hint_p"
+                            android:inputType="textPassword"/>
+                </TableRow>
+
+                <TableRow android:layout_marginBottom="10dip">
+
+                    <CheckBox
+                            android:id="@+id/cb_login_auto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dip"
+                            android:layout_column="1"
+                            android:checked="true"
+                            android:text="@string/login_auto_login"
+                            android:textColor="@color/black"/>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dip"
+                    android:layout_marginRight="20dip"
+                    android:gravity="left"
+                    android:text="@string/login_intro"
+                    android:textColor="@color/login_stro_color"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@drawable/bg_btn_panle"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/btn_login_exit"
+                style="@style/btn_white"
+                android:layout_width="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="@string/common_exit"
+                tools:ignore="NestedWeights"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"></LinearLayout>
+
+        <Button
+                android:id="@+id/btn_login_submit"
+                style="@style/btn_blue"
+                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="@string/login_ln"/>
+    </LinearLayout>
+
+</LinearLayout>

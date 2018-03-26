@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_app"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/layout_title" >
+
+        <TextView
+            style="@style/text_title"
+            android:layout_weight="1"
+            android:text="@string/common_camera" />
+
+        <ImageButton
+            android:id="@+id/btn_upload"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="0"
+            android:background="@drawable/draw_btn_header"
+            android:contentDescription="@string/common_more"
+            android:src="@drawable/ic_upload"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/btn_help"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="0"
+            android:background="@drawable/draw_btn_header"
+            android:contentDescription="@string/common_more"
+            android:src="@drawable/ic_help" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_camera_flow"
+        style="@style/list_default"
+        android:layout_weight="1"
+        android:dividerHeight="0dp"
+        android:listSelector="@color/opacity"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/bg_btn_panle"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_img_show"
+            style="@style/btn_green"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/common_imgshow" />
+    </LinearLayout>
+
+</LinearLayout>

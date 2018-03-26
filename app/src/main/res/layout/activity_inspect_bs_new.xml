@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_app"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/text_title"
+        android:layout_height="48dip"
+        android:background="@drawable/bg_header"
+        android:gravity="center"
+        android:text="@string/it_sbs" />
+
+    <TextView
+        style="@style/text_default"
+        android:layout_width="match_parent"
+        android:background="@drawable/draw_bg_group_normal"
+        android:gravity="left|center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="6dp"
+        android:paddingTop="8dp"
+        android:singleLine="true"
+        android:text="@string/inset_bs"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_insetbs"
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@drawable/draw_bg_list"
+        android:drawableRight="@drawable/ic_into"
+        android:gravity="left|center"
+        android:padding="5dip"
+        android:textColor="@color/black" />
+
+    <TextView
+        style="@style/text_default"
+        android:layout_width="match_parent"
+        android:background="@drawable/draw_bg_group_normal"
+        android:gravity="left|center"
+        android:paddingBottom="8dp"
+        android:paddingLeft="6dp"
+        android:paddingTop="8dp"
+        android:singleLine="true"
+        android:text="@string/inset_cell_rru"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btn_insetcell"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/draw_bg_list"
+        android:drawableRight="@drawable/ic_into"
+        android:gravity="left|center"
+        android:padding="5dip"
+        android:textColor="@color/black" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/draw_bg_group_normal"
+        android:gravity="left|center"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/text_default"
+            android:gravity="left|center"
+            android:paddingLeft="5dp"
+            android:text="@string/it_bs_new"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/draw_input"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_bs_name"
+                android:layout_width="match_parent"
+                android:layout_height="32dip"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:hint="@string/hint_name_bs"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btn_bs_query"
+                android:layout_width="30dip"
+                android:layout_height="30dip"
+                android:layout_margin="1dip"
+                android:layout_weight="0"
+                android:background="@drawable/draw_btn_search" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_state"
+        style="@style/text_default"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ic_green_light"
+        android:gravity="center"
+        android:text="@string/common_request"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/lv_near_bs"
+        style="@style/list_default"
+        android:visibility="gone" />
+
+</LinearLayout>

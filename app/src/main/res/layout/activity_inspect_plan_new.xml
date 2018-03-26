@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_app"
+    android:orientation="vertical" >
+    <include layout="@layout/toolbar"></include>
+
+
+    <TextView
+        android:id="@+id/tv_bsname"
+        style="@style/text_default"
+        android:layout_width="match_parent"
+        android:background="@drawable/draw_bg_group_normal"
+        android:drawableRight="@drawable/ic_rru_off"
+        android:gravity="left|center"
+        android:padding="5dp"
+        android:paddingBottom="10dp"
+        android:singleLine="false"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ListView
+            android:id="@+id/lv_plan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/sendtroublebtn"
+            android:cacheColorHint="@color/opacity"
+            android:divider="@color/gray"
+            android:dividerHeight="0dp"
+            android:listSelector="@color/opacity"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/sendtroublebtn"
+            style="@style/btn_blue"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="上报隐患" />
+    </RelativeLayout>
+
+</LinearLayout>

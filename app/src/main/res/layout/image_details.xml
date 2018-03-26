@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/draw_bg_app"
+              android:orientation="vertical">
+
+    <TextView
+            android:id="@+id/tv_state"
+            style="@style/text_default"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:drawableLeft="@drawable/ic_green_light"
+            android:gravity="center"
+            android:text="@string/common_request"
+            android:visibility="visible"/>
+
+    <cn.com.chinaccs.widget.ZoomImageView
+            android:id="@+id/zoom_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#000000"
+            android:visibility="gone">
+    </cn.com.chinaccs.widget.ZoomImageView>
+
+</LinearLayout>

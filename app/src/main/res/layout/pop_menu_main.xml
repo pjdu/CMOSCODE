@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/draw_bg_menu"
+              android:orientation="vertical"
+              android:padding="5dp">
+
+    <Button
+            android:id="@+id/btn_menu_about"
+            android:layout_width="120dp"
+            android:layout_height="48dip"
+            android:background="@drawable/draw_bg_list"
+            android:drawableLeft="@drawable/ic_app"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="@string/common_about"
+            android:textColor="@color/black"/>
+
+    <View
+            android:layout_width="120dp"
+            android:layout_height="1dip"
+            android:background="@color/gray"/>
+
+    <Button
+            android:id="@+id/btn_menu_safe"
+            android:layout_width="120dp"
+            android:layout_height="48dip"
+            android:background="@drawable/draw_bg_list"
+            android:drawableLeft="@drawable/ic_safe"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="@string/common_account_safe"
+            android:textColor="@color/black"/>
+
+    <View
+            android:layout_width="120dp"
+            android:layout_height="1dip"
+            android:background="@color/gray"/>
+
+    <Button
+            android:id="@+id/btn_menu_update"
+            android:layout_width="120dp"
+            android:layout_height="48dip"
+            android:background="@drawable/draw_bg_list"
+            android:drawableLeft="@drawable/ic_update"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="@string/common_update_app"
+            android:textColor="@color/black"/>
+
+    <View
+            android:layout_width="120dp"
+            android:layout_height="1dip"
+            android:background="@color/gray"/>
+
+    <Button
+            android:id="@+id/btn_menu_setting"
+            android:layout_width="120dp"
+            android:layout_height="48dip"
+            android:background="@drawable/draw_bg_list"
+            android:drawableLeft="@drawable/ic_setting"
+            android:gravity="center"
+            android:padding="5dip"
+            android:text="@string/common_setting"
+            android:textColor="@color/black"/>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_app"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/text_title"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_header"
+        android:gravity="center"
+        android:text="@string/qa_answer" />
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <EditText
+            android:id="@+id/edit_answer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/draw_input"
+            android:gravity="top"
+            android:textSize="16sp"
+            android:hint="@string/answer_hint" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/shen_yu_zi_shu_answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:textColor="@color/green_deep" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/bg_btn_panle"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/answer_submit"
+            style="@style/btn_green"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/answer_submit" />
+    </LinearLayout>
+
+</LinearLayout>

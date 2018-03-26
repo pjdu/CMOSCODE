@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by AndyHua on 2017/7/31.
+  ~ Copyright © 2017年 ytf. All rights reserved.
+  ~
+  ~ Last Modified on 2015-10-08 22:57:12.
+  -->
+
+<animated-rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/icon_loading_progress"
+    android:pivotX="50%"
+    android:pivotY="50%" />

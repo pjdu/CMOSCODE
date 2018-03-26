@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by AndyHua on 2017/10/27.
+  ~ Copyright © 2017年 ytf. All rights reserved.
+  ~
+  ~ Last Modified on 2016-07-21 12:50:56.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:chinaccs="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@drawable/draw_bg_app"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:background="@drawable/draw_bg_round"
+                android:orientation="horizontal"
+                android:padding="1dip">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dip"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/app_logo"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dip"
+                    android:layout_marginTop="8dip"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:text="@string/asset_name"/>
+
+                    <TextView
+                        android:id="@+id/tv_version"
+                        style="@style/text_default"
+                        android:layout_marginTop="5dip"
+                        android:text="@string/asset_name"
+                        android:textColor="@color/main_app"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/draw_bg_round"
+                android:orientation="vertical"
+                android:padding="1dip">
+
+                <Button
+                    android:id="@+id/btn_config_autologin"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round"
+                    android:drawableRight="@drawable/ic_slide_cb_on"
+                    android:gravity="left|center"
+                    android:padding="5dip"
+                    android:text="@string/common_autologin"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/gray"
+                    android:visibility="gone"/>
+
+                <Button
+                    android:id="@+id/btn_config_httptest"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round"
+                    android:drawableRight="@drawable/ic_slide_cb_on"
+                    android:gravity="left|center"
+                    android:padding="5dip"
+                    android:text="@string/common_auto_httptest"
+                    android:visibility="gone"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/gray"/>
+
+                <Button
+                    android:id="@+id/btn_config_teach"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round"
+                    android:drawableRight="@drawable/ic_slide_cb_on"
+                    android:gravity="left|center"
+                    android:padding="5dip"
+                    android:text="@string/common_auto_teach"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/draw_bg_round"
+                android:orientation="vertical"
+                android:padding="1dip">
+
+                <Button
+                    android:id="@+id/btn_config_4g"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round_top"
+                    android:drawableRight="@drawable/ic_slide_cb_on"
+                    android:gravity="left|center"
+                    android:padding="5dip"
+                    android:text="@string/common_auto4G"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/gray"/>
+
+                <Button
+                    android:id="@+id/btn_config_wifi"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round_buttom"
+                    android:drawableRight="@drawable/ic_slide_cb_on"
+                    android:gravity="left|center"
+                    android:padding="5dip"
+                    android:text="@string/common_autoWifi"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:background="@drawable/draw_bg_round"
+                android:orientation="vertical"
+                android:padding="1dip"
+                android:visibility="gone">
+
+                <cn.com.chinaccs.datasite.main.widget.CheckBoxButton
+                    android:id="@+id/cbl_msg"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round_top"
+                    android:padding="5dp"
+                    chinaccs:label="@string/common_msg"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/gray"/>
+
+                <cn.com.chinaccs.datasite.main.widget.CheckBoxButton
+                    android:id="@+id/cbl_msg_inspect"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="5dp"
+                    chinaccs:label="@string/common_msg_inspect"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/gray"/>
+
+                <cn.com.chinaccs.datasite.main.widget.CheckBoxButton
+                    android:id="@+id/cbl_msg_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="5dp"
+                    chinaccs:label="@string/common_msg_data"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dip"
+                    android:background="@color/gray"/>
+
+                <cn.com.chinaccs.datasite.main.widget.CheckBoxButton
+                    android:id="@+id/cbl_msg_qa"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round_buttom"
+                    android:paddingLeft="15dip"
+                    android:paddingRight="5dp"
+                    chinaccs:label="@string/common_msg_qa"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/draw_bg_round"
+                android:orientation="vertical"
+                android:padding="1dip">
+
+                <Button
+                    android:id="@+id/btn_config_changepw"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round"
+                    android:gravity="center"
+                    android:padding="5dip"
+                    android:text="@string/common_changepwd"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/draw_bg_round"
+                android:orientation="vertical"
+                android:padding="1dip">
+
+                <Button
+                    android:id="@+id/btn_config_update"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round"
+                    android:gravity="center"
+                    android:padding="5dip"
+                    android:text="@string/common_update_app"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/draw_bg_round"
+                android:orientation="vertical"
+                android:padding="1dip">
+
+                <Button
+                    android:id="@+id/btn_config_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dip"
+                    android:background="@drawable/draw_btn_st_round"
+                    android:gravity="center"
+                    android:padding="5dip"
+                    android:text="@string/common_about"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

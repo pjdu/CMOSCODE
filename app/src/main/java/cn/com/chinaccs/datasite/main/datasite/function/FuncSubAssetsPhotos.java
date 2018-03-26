@@ -1,0 +1,229 @@
+package cn.com.chinaccs.datasite.main.datasite.function;
+
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v4.view.ViewPager.LayoutParams;
+import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.List;
+
+import cn.com.chinaccs.datasite.main.DataSiteStart;
+import cn.com.chinaccs.datasite.main.R;
+import cn.com.chinaccs.datasite.main.common.App;
+import cn.com.chinaccs.datasite.main.common.AppHttpConnection;
+import cn.com.chinaccs.datasite.main.db.dao.DAOAssetsPhoto;
+import cn.com.chinaccs.datasite.main.db.model.AssetsPhotosModel;
+import cn.com.chinaccs.datasite.main.ui.MainActivity;
+import cn.com.chinaccs.datasite.main.ui.cmos.InspectSignActivity;
+
+/**
+ * @author Fddi
+ * 
+ */
+public class FuncSubAssetsPhotos {
+	private Context context;
+	private PopupWindow pop;
+	private View popState;
+	private ProgressBar pb;
+	private TextView textState;
+	private Button btnClose;
+	private Button btnHome;
+	private LinearLayout layoutAction;
+	private Button btnPlan;
+
+	public FuncSubAssetsPhotos(Context context) {
+		this.context = context;
+	}
+
+	public void subData(final String id,final String fileType, final List<AssetsPhotosModel> listImg) {
+		if (listImg == null) {
+			Toast.makeText(context, "获取上传图片失败！", Toast.LENGTH_LONG).show();
+			return;
+		}
+		popStateFindViews();
+		//临时修改
+		btnPlan.setVisibility(View.GONE);
+		pb.setMax(listImg.size());
+		pop = new PopupWindow(popState, LayoutParams.MATCH_PARENT,
+				LayoutParams.MATCH_PARENT);
+		pop.setBackgroundDrawable(context.getResources().getDrawable(
+				R.drawable.draw_bg_opactiy));
+		pop.setFocusable(true);
+		// pop.setAnimationStyle(R.style.style_popupAnim);
+		pop.showAtLocation(((Activity) context).findViewById(R.id.main),
+				Gravity.CENTER, 0, 0);
+		pop.update();
+		this.subExcute(id, fileType, listImg);
+	}
+
+	private void subExcute(final String id,final String fileType, final List<AssetsPhotosModel> listImg) {
+		final StringBuffer sr = new StringBuffer("提交资产清查照片中...");
+		textState.setText(sr.toString());
+		pb.setProgress(1);
+		final ICHandler hr = new ICHandler(context, pb, textState,
+				layoutAction);
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				Message m;
+				try {
+					
+					FuncUploadFile ff = new FuncUploadFile(context);
+					for (int i = 0; i < listImg.size(); i++) {
+						AssetsPhotosModel photos = listImg.get(i);
+						if (photos.getLocalImgUrl() != null) {							
+							String res = ff.uploadFileToServer(
+									photos.getLocalImgUrl(), fileType, photos.getDesc(),
+									String.valueOf(photos.getType()), photos.getSubType(), id,
+									DataSiteStart.HTTP_SERVER_URL,
+									DataSiteStart.HTTP_KEYSTORE);
+							if (res.equals(AppHttpConnection.RESULT_FAIL)) {
+								m = hr.obtainMessage(201, "上传图片："
+										+ photos.getDesc() + "--失败");
+								hr.sendMessage(m);
+							} else {
+								JSONObject imgjr = new JSONObject(res);
+								m = hr.obtainMessage(201,
+										"上传图片：" + photos.getDesc() + "--"
+												+ imgjr.getString("msg"));
+								hr.sendMessage(m);
+								String resCode = imgjr.getString("result");
+								if (resCode.equals("1")
+										&& photos.getDesc() != null) {
+									photos.setUpload(true);
+									DAOAssetsPhoto.getInstance(context).update(photos);
+								}
+								pb.setProgress(i+1);
+							}
+						}
+					}
+					m = hr.obtainMessage(200, "恭喜，提交资产清查图片成功！");
+					hr.sendMessage(m);
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}).start();
+	}
+
+
+	private void popStateFindViews() {
+		LayoutInflater li = (LayoutInflater) context
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		popState = li.inflate(R.layout.pop_updata_state, null);
+		pb = (ProgressBar) popState.findViewById(R.id.pb_state);
+		textState = (TextView) popState.findViewById(R.id.text_state);
+		btnClose = (Button) popState.findViewById(R.id.btn_pop_close);
+		btnHome = (Button) popState.findViewById(R.id.btn_pop_home);
+		btnPlan = (Button) popState.findViewById(R.id.btn_pop_plan);
+		layoutAction = (LinearLayout) popState.findViewById(R.id.layout_action);
+//		pb.setMax(5);
+		layoutAction.setVisibility(View.GONE);
+		OnClickListener lr = new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				switch (v.getId()) {
+				case R.id.btn_pop_close:
+					if (pop != null)
+						pop.dismiss();
+					break;
+				case R.id.btn_pop_home:
+					((Activity) context).finish();
+					context.startActivity(new Intent(context,
+							MainActivity.class));
+					break;
+				case R.id.btn_pop_plan:
+					((Activity) context).finish();
+					break;
+				}
+			}
+		};
+		btnClose.setOnClickListener(lr);
+		btnHome.setOnClickListener(lr);
+		btnPlan.setOnClickListener(lr);
+	}
+
+	/**
+	 * @author Fddi
+	 * 
+	 */
+	static class ICHandler extends Handler {
+		private ProgressBar pb;
+		private TextView textState;
+		private Context context;
+		private LinearLayout layout;
+
+		public ICHandler(Context context, ProgressBar pb, TextView textState,
+				LinearLayout layout) {
+			this.context = context;
+			this.pb = pb;
+			this.textState = textState;
+			this.layout = layout;
+			
+		}
+
+
+		private void clearSign() {
+			SharedPreferences share = context.getSharedPreferences(
+					App.SHARE_TAG, 0);
+			share.edit().putFloat(InspectSignActivity.SHARE_SIGN_LNG, 0)
+					.commit();
+			share.edit().putFloat(InspectSignActivity.SHARE_SIGN_LAT, 0)
+					.commit();
+			share.edit().putLong(InspectSignActivity.SHARE_SIGN_DATE, 0)
+					.commit();
+		}
+
+		@Override
+		public void handleMessage(Message msg) {
+			// TODO Auto-generated method stub
+			String reslutInfo = (String) msg.obj;
+			Log.d(App.LOG_TAG, reslutInfo);
+			switch (msg.what) {
+			case 200:
+				pb.setProgress(7);
+				textState.append("\n");
+				textState.append(reslutInfo);
+				layout.setVisibility(View.VISIBLE);
+//				clearSign();
+				break;
+			case 201:
+				textState.append("\n");
+				textState.append(reslutInfo);
+				break;
+			case 501:
+				pb.setProgress(7);
+				textState.append("\n");
+				textState.append(reslutInfo);
+				break;
+			default:
+				textState.append("\n");
+				textState.append(reslutInfo);
+//				pb.setProgress(msg.what);
+				break;
+			}
+		}
+	}
+}

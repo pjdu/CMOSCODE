@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white2"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <include layout="@layout/toolbar"></include>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/draw_bg_round"
+                android:orientation="vertical"
+                android:padding="1dip" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:background="@color/white2"
+                    android:gravity="left|center"
+                    android:padding="5dip"
+                    android:text="@string/busi_sites"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <GridView
+                    android:id="@+id/grid_sites"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:layout_margin="5dip"
+                    android:columnWidth="90dp"
+                    android:gravity="center"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="@drawable/draw_bg_grid"
+                    android:numColumns="3"
+                    android:paddingTop="10dp"
+                    android:stretchMode="columnWidth"
+                    android:verticalSpacing="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_busi_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/draw_bg_round"
+                android:orientation="vertical"
+                android:padding="1dip" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="1dp"
+                    android:background="@color/white2"
+                    android:gravity="left|center"
+                    android:padding="5dip"
+                    android:text="@string/busi_result"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TableLayout
+                    android:id="@+id/tl_busi_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="1dp"
+                    android:background="@color/gray"
+                    android:stretchColumns="1" >
+                </TableLayout>
+            </LinearLayout>
+            <!-- <TextView
+                android:id="@+id/tv_test_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/black_op2"
+                android:padding="5dp"
+                android:text="@string/busi_result"
+                android:textColor="@color/black2"
+                android:textSize="15sp" /> -->
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/bg_btn_panle"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_site_start"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/draw_bg_btn"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="@string/site_start"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_site_test_records"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/draw_bg_btn"
+            android:onClick="moreInfoClick"
+            android:gravity="center"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="@string/site_test_records"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

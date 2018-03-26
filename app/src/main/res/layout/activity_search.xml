@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/map_view_main_layout"/>
+    <include layout="@layout/toolbar"/>
+    <ImageButton
+        android:id="@+id/requestLocBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_icon_background"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="45dip" />
+</RelativeLayout>

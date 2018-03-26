@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/color_efefef"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar" />
+
+    <TextView
+        android:id="@+id/txt_assets_state"
+        style="@style/text_default"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:drawableStart="@drawable/ic_green_light"
+        android:gravity="center"
+        android:text="@string/common_request"
+        android:visibility="visible"/>
+
+    <ListView
+        android:id="@+id/lv_assets"
+        style="@style/list_default"
+        android:layout_weight="1"
+        android:background="@color/color_efefef"
+        android:divider="@color/color_efefef"
+        android:dividerHeight="8dp"
+        android:padding="8dp"
+        android:visibility="gone">
+    </ListView>
+
+    <ProgressBar
+        android:id="@+id/pb_assets"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"/>
+
+</LinearLayout>

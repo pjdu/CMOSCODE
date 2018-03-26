@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by AndyHua on 2017/12/5.
+  ~ Copyright © 2017年 ytf. All rights reserved.
+  ~
+  ~ Last Modified on 2017-12-04 17:35:20.
+  -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="bottom"/>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+    </android.support.v4.app.FragmentTabHost>
+</LinearLayout>

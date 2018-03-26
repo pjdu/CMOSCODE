@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="5dp" >
+
+    <TextView
+        android:id="@+id/tv_signal_cell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/signal_0"
+        android:gravity="left|bottom"
+        android:singleLine="false"
+        android:text="@string/net_1x"
+        android:textColor="@color/blue1"
+        android:textSize="12sp" />
+
+</RelativeLayout>

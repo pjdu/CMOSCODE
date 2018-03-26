@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true" />
+
+    <LinearLayout
+        android:id="@+id/org_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/sp_blindArea"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_column="1"
+            android:background="@drawable/bsstate_bg"
+            android:textColor="@color/black" />
+
+        <Spinner
+            android:id="@+id/sp_blindCounty"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_column="1"
+            android:background="@drawable/bsstate_bg"
+            android:textColor="@color/black" />
+
+        <Spinner
+            android:id="@+id/sp_blindTowns"
+            android:layout_width="90dp"
+            android:layout_height="45dp"
+            android:layout_column="1"
+            android:background="@drawable/bsstate_bg"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_bsstate_critical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/bsstate_critical" />
+
+            <ImageView
+                android:id="@+id/badge_bsstate_critical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_bsstate_major"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/bsstate_major" />
+
+            <ImageView
+                android:id="@+id/badge_bsstate_major"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_bsstate_minor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/bsstate_minor" />
+
+            <ImageView
+                android:id="@+id/badge_bsstate_minor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_bsstate_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/bsstate_warning" />
+
+            <ImageView
+                android:id="@+id/badge_bsstate_warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layout_bsstate_nomall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/bsstate_nomall" />
+
+            <ImageView
+                android:id="@+id/badge_bsstate_nomall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/switchViewBtn"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="90dip"
+        android:layout_marginLeft="5dp"
+        android:src="@drawable/icon_list_view_btn"
+        android:background="@drawable/ic_icon_background" />
+    <ImageButton
+        android:id="@+id/requestLocBtn"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="45dip"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/ic_icon_background" />
+    <!--<Button
+        android:id="@+id/btn_inspect_sign"
+        android:layout_width="45dip"
+        android:layout_height="45dip"
+        android:text="签到"
+        android:textSize="14sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="90dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@drawable/ic_icon_background" />-->
+</RelativeLayout>

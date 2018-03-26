@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_app"
+    android:orientation="vertical" >
+
+    <!--<TextView
+        style="@style/text_title"
+        android:layout_height="45dp"
+        android:background="@color/blue_deep"
+        android:gravity="center"
+        android:text="@string/suggest" />-->
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/draw_bg_group_normal"
+        android:gravity="left|center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center"
+            android:padding="5dp"
+            android:singleLine="false"
+            android:text="@string/sg_desc"
+            android:textColor="@color/black1"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <EditText
+            android:id="@+id/sg_edite"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/draw_input"
+            android:gravity="top"
+            android:hint=""
+            android:textSize="16sp" >
+        </EditText>
+
+        <TextView
+            android:id="@+id/sg_shen_yu_zi_shu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dp"
+            android:textColor="@color/blue" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/edit_question_biaoqian"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="3dp"
+            android:background="@drawable/draw_input"
+            android:gravity="top"
+            android:hint="@string/question_biaoqian"
+            android:visibility="gone" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/bg_btn_panle"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/sg_submit_btn"
+            style="@style/btn_blue"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@string/sg_submit" />
+    </LinearLayout>
+
+</LinearLayout>

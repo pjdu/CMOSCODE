@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by AndyHua on 2017/10/26.
+  ~ Copyright © 2017年 ytf. All rights reserved.
+  ~
+  ~ Last Modified on 2017-07-26 16:12:40.
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/list_circle_bg"
+              android:gravity="center_vertical"
+              android:orientation="horizontal"
+              android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txt_item_name"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="8"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/color_333333"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txt_item_num"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_weight="2"
+        android:drawableEnd="@drawable/ic_into"
+        android:gravity="end|center_vertical"
+        android:textColor="@color/color_ff8801"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

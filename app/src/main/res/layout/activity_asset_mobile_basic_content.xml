@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by AndyHua on 2017/8/4.
+  ~ Copyright © 2017年 ytf. All rights reserved.
+  ~
+  ~ Last Modified on 2017-08-03 16:27:13.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_app"
+    android:gravity="center">
+
+    <include
+        android:id="@+id/tool_top"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/tool_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_btn_panle"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_close"
+            style="@style/btn_white"
+            android:layout_weight="1"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/common_close"/>
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/btn_red"
+            android:layout_weight="1"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/common_sub"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tool_bottom"
+        android:layout_below="@id/tool_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="物理站址名称"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_psite_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="物理站址编号"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_psite_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="start|center"
+                    android:text="固定资产卡片编号"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:gravity="start|center"
+                    android:text="设备信息，现场核对"
+                    android:textColor="@color/red_warn"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_psite_assets_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_bts_assets_no"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@drawable/icon_qr_code"
+                        android:padding="5dp"
+                        android:text="扫码"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="省"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_psite_province"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="地市"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_psite_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="区县"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_psite_county"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="乡镇"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_psite_town"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="行政村"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/et_psite_a_village"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="自然村"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_psite_village"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="详细地址"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/et_psite_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="现场采集经度"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_psite_lon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_psite_lon"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_gps"
+                        android:padding="5dp"
+                        android:text="获取位置"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="现场采集纬度"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_psite_lat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_psite_lat"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_gps"
+                        android:padding="5dp"
+                        android:text="获取位置"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="覆盖场景"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_psite_cover_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_psite_cover_type"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="维护难度"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_psite_main_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_psite_main_level"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="电信基站等级"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_psite_site_level"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_psite_site_level"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="共享类型"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_psite_share_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_psite_share_type"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="产权性质"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_psite_ownership_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_psite_ownership_type"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="设备类型"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_psite_device_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_psite_device_type"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="站点类型"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="站址信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_psite_site_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:enabled="false"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_psite_site_type"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/basic_chosice"
+                        android:padding="5dp"
+                        android:text="点击选择"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

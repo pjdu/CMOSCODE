@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/blackl1"
+              android:orientation="vertical">
+    <include layout="@layout/toolbar"/>
+
+<!--    <LinearLayout style="@style/layout_title">
+
+        <TextView
+                style="@style/text_title"
+                android:layout_weight="1"
+                android:text="@string/box_azimuth"/>
+
+        <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_weight="0"
+                android:background="@drawable/divi"/>
+
+        <ImageButton
+                android:id="@+id/btn_help"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="1dp"
+                android:layout_weight="0"
+                android:background="@drawable/draw_btn_header"
+                android:contentDescription="@string/common_more"
+                android:src="@drawable/ic_help"/>
+    </LinearLayout>-->
+
+    <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <cn.com.chinaccs.datasite.main.widget.CompassView
+                android:id="@+id/compass_pointer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/box_azimuth"
+                android:src="@drawable/compass_cn"/>
+
+        <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/draw_btn_white2"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/float_default"
+                android:textColor="@color/main_app"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+    </FrameLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/btn_get"
+                style="@style/btn_blue"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/get_angle"/>
+    </LinearLayout>
+
+</LinearLayout>

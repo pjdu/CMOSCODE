@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/main"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/color_efefef"
+              android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_text_panle"
+        android:orientation="vertical"
+        android:paddingBottom="0dp">
+
+        <TextView
+            android:id="@+id/txt_name_assets"
+            style="@style/text_default"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:minHeight="30dp"
+            android:text="jhdfjksh"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_margin="4dp"
+                    android:text="@string/common_utime"
+                    android:textColor="@color/color_888888"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/txt_date_assets"
+                    style="@style/text_default"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/color_2ed573"/>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    style="@style/text_default"
+                    android:layout_margin="4dp"
+                    android:text="@string/common_user"
+                    android:textColor="@color/color_bbbbbb"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/txt_user_assets"
+                    style="@style/text_default"
+                    android:layout_margin="4dp"
+                    android:textColor="@color/color_2ed573"/>
+            </TableRow>
+
+        </TableLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_state_assets"
+        style="@style/text_default"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:drawableStart="@drawable/ic_green_light"
+        android:gravity="center"
+        android:text="@string/common_request"
+        android:visibility="gone"/>
+
+    <ListView
+        android:id="@+id/elv_assets"
+        style="@style/list_default"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/color_efefef"
+        android:divider="@color/color_efefef"
+        android:dividerHeight="4dp"
+        android:padding="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/linear_btn_assets_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@drawable/bg_btn_panle"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btn_img_assets"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/draw_btn_photo"/>
+
+        <Button
+            android:id="@+id/btn_datac_assets"
+            style="@style/btn_blue"
+            android:layout_width="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="30dp"
+            android:gravity="center"
+            android:text="@string/assets_ins"/>
+    </LinearLayout>
+
+</LinearLayout>

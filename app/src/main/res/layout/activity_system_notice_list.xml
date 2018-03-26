@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_app"
+    android:orientation="vertical" >
+
+   <!-- <TextView
+        style="@style/text_title"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_header"
+        android:gravity="center"
+        android:text="@string/sys_notice_list" />-->
+    <include layout="@layout/toolbar"/>
+
+    <TextView
+        android:id="@+id/txt_state"
+        style="@style/text_default"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/ic_green_light"
+        android:gravity="center"
+        android:text="@string/common_request"
+        android:visibility="visible" />
+
+    <ListView
+        android:id="@+id/lv_sys_notice"
+        style="@style/list_default"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1"
+        android:visibility="gone" >
+    </ListView>
+
+    <ProgressBar
+        android:id="@+id/pb_sys_notice"
+        style="?android:attr/progressBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="0"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_grid"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dip" >
+
+    <FrameLayout
+        android:layout_width="72dp"
+        android:layout_height="72dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <ImageView
+                android:id="@+id/img_site"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/common_img_desc"
+                android:src="@drawable/sina_video" >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/img_mark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/img_site"
+                android:layout_alignTop="@id/img_site"
+                android:contentDescription="@string/common_img_desc"
+                android:src="@drawable/ic_mark_fast"
+                android:visibility="visible" >
+            </ImageView>
+
+            <ImageView
+                android:id="@+id/img_st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/img_site"
+                android:layout_alignBottom="@id/img_site"
+                android:layout_alignRight="@id/img_site"
+                android:contentDescription="@string/common_img_desc"
+                android:src="@drawable/ic_selected_green"
+                android:visibility="gone" >
+            </ImageView>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/pb_site"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white_op1"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/black5"
+        android:textSize="16sp" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/tv_speed"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/split_website_speed"
+        android:gravity="center"
+        android:paddingTop="5dp"
+        android:singleLine="false"
+        android:text="@string/speed_unit_kbps"
+        android:textColor="@color/black8"
+        android:textSize="14sp"
+        android:visibility="invisible" >
+    </TextView>
+
+</LinearLayout>

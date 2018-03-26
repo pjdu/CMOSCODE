@@ -1,0 +1,1357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by AndyHua on 2017/11/3.
+  ~ Copyright © 2017年 ytf. All rights reserved.
+  ~
+  ~ Last Modified on 2017-10-28 18:18:58.
+  -->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_app"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center">
+
+    <include
+        android:id="@+id/tool_top"
+        layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/tool_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_btn_panle"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_close"
+            style="@style/btn_white"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:text="@string/common_close"/>
+
+        <Button
+            android:id="@+id/btn_submit"
+            style="@style/btn_red"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:text="@string/common_submit"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tool_bottom"
+        android:layout_below="@id/tool_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="资源编号"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/input_normal"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/et_res_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00000000"
+                        android:inputType="text"
+                        android:textSize="14sp"/>
+
+                    <Button
+                        android:id="@+id/btn_res_code"
+                        style="@style/btn_green"
+                        android:layout_width="wrap_content"
+                        android:layout_margin="2dp"
+                        android:layout_weight="0"
+                        android:drawableStart="@mipmap/tower_saoma"
+                        android:padding="5dp"
+                        android:text="扫码"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="割接时老资产卡片号"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_old_asset_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="资产卡片编号"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_asset_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="公司名称"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_comp_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="地市名称"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_city_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="区县名称"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_county_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="乡镇名称"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_town_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="使用部门"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_use_dep_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="资产分类(15类)"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_asset_type15"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="资产目录"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_asset_catlog"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="资产目录名称"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_asset_catlog_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="资产名称"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_asset_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="规格程式"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_model"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="数量A"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_count_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="数量A单位名称"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_count_a_unit"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="制造商"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_vendor"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="地点"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="创建时间"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_create_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="更新时间"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_update_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="状态"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="资产管理员"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_asset_manager"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="资产保管员"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_asset_keeper"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="责任人"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_person_resp"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="是否客户端资产"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_client_asset"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="工程名称"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_prj_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="工程编码"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_prj_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="利润中心编号"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_pro_center_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/draw_bg_app"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:gravity="start|center"
+                        android:text="利润中心组"
+                        android:textSize="16sp"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        style="@style/text_default"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:gravity="end|center"
+                        android:text="资产信息，现场核对"
+                        android:textColor="@color/red_warn"/>
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/tv_card_pro_center_gp_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/input_normal"
+                    android:enabled="false"
+                    android:inputType="text"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

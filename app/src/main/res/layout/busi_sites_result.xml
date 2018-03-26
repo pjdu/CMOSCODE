@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white2"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="0dp"
+        android:background="@color/black_deep" >
+
+            <TextView
+                android:id="@+id/tv_busi_result_1"
+                style="@style/text_default"
+                android:layout_width="50dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="0.7dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="3dip"
+                android:gravity="center"
+                android:text="@string/busi_sites" />
+
+            <TextView
+                android:id="@+id/tv_busi_result_2"
+                style="@style/text_default"
+                android:layout_width="50dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="0.7dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="3dip"
+                android:gravity="center"
+                android:text="@string/busi_firDefer" />
+
+            <TextView
+                android:id="@+id/tv_busi_result_3"
+                style="@style/text_default"
+                android:layout_width="50dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="0.7dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="3dip"
+                android:gravity="center"
+                android:text="@string/busi_fuDefer" />
+
+            <TextView
+                android:id="@+id/tv_busi_result_4"
+                style="@style/text_default"
+                android:layout_width="50dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginLeft="0.7dp"
+                android:layout_marginRight="1dp"
+                android:layout_marginTop="1dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:padding="3dip"
+                android:gravity="center"
+                android:text="@string/busi_avgSpeed" />
+
+    </LinearLayout>
+
+</LinearLayout>

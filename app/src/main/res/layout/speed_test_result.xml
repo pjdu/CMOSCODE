@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white2"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:id="@+id/st_fl_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/common_img_desc"
+            android:src="@drawable/bg_dial" 
+            android:layout_marginTop="10dp"/>
+
+        <ImageView
+            android:id="@+id/iv_level_circle"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/common_img_desc"
+            android:src="@drawable/pic_arrow_circle"
+            android:layout_marginTop="10dp" />
+
+        <ImageView
+            android:id="@+id/iv_level"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/common_img_desc"
+            android:src="@drawable/ic_level_walker"
+            android:layout_marginTop="10dp" />
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_app"
+    android:orientation="vertical" >
+
+   <!-- <TextView
+        style="@style/text_title"
+        android:layout_height="45dp"
+        android:background="@drawable/bg_header"
+        android:gravity="center"
+        android:text="@string/qa_personal_center" />-->
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black5"
+        android:orientation="horizontal" >
+
+        <View
+            android:id="@+id/personal_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center|left"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="0"
+            android:background="@drawable/ic_default_usericon" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/qa_personal_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:text="@string/answer_times"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/qa_personal_answerTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|left"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TabHost
+        android:id="@+id/tab_personal"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:id="@+id/my_score"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/txt_my_score_state"
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_green_light"
+                        android:gravity="center"
+                        android:text="@string/common_request"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="30dp" >
+
+                        <View
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/user_center_record_helped_people"
+                            android:paddingTop="10dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                style="@style/text_default"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="@string/answer_times"
+                                android:textColor="#006400"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                style="@style/text_default"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="@string/answer_times_miaoshu"
+                                android:textColor="#668B8B"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txt_my_answertimes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="70dp"
+                            android:layout_weight="0"
+                            android:gravity="center|left"
+                            android:textColor="@color/green_deep"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp" >
+
+                        <View
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/user_center_good_rate"
+                            android:paddingTop="10dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                style="@style/text_default"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="@string/answer_caina"
+                                android:textColor="#006400"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                style="@style/text_default"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="@string/answer_caina_miaoshu"
+                                android:textColor="#668B8B"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txt_my_answercaina"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="70dp"
+                            android:layout_weight="0"
+                            android:gravity="center|left"
+                            android:textColor="@color/green_deep"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="horizontal"
+                        android:paddingTop="10dp" >
+
+                        <View
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|left"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_weight="0"
+                            android:background="@drawable/user_center_good_rate"
+                            android:paddingTop="10dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center|left"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                style="@style/text_default"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="@string/answer_djy"
+                                android:textColor="#006400"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                style="@style/text_default"
+                                android:layout_marginLeft="10dp"
+                                android:gravity="center"
+                                android:text="@string/answer_djy_miaoshu"
+                                android:textColor="#668B8B"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/txt_my_answerdjy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="70dp"
+                            android:layout_weight="0"
+                            android:gravity="center|left"
+                            android:textColor="@color/green_deep"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/pb_my_score"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/my_question"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/txt_my_question_state"
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_green_light"
+                        android:gravity="center"
+                        android:text="@string/common_request"
+                        android:visibility="visible" />
+
+                    <ListView
+                        android:id="@+id/lv_my_question"
+                        style="@style/list_default"
+                        android:layout_weight="1"
+                        android:visibility="gone" >
+                    </ListView>
+
+                    <ProgressBar
+                        android:id="@+id/pb_my_question"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/my_answer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/txt_my_answer_state"
+                        style="@style/text_default"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/ic_green_light"
+                        android:gravity="center"
+                        android:text="@string/common_request"
+                        android:visibility="visible" />
+
+                    <ListView
+                        android:id="@+id/lv_my_answer"
+                        style="@style/list_default"
+                        android:layout_weight="1"
+                        android:visibility="gone" >
+                    </ListView>
+
+                    <ProgressBar
+                        android:id="@+id/pb_my_answer"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="0"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

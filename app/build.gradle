@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.3'
+
+    defaultConfig {
+        applicationId "cn.com.chinaccs.datasite.main"
+        minSdkVersion 19
+        targetSdkVersion 22
+        versionCode 61
+        versionName "6.1"
+
+        ndk {
+            abiFilters "armeabi"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //Here the magic Begins
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    //Here the magic Ends
+
+    useLibrary 'org.apache.http.legacy'
+    // As the error message suggests you are not excluding the META-INF/LICENSE file which exists in more than one of your dependencies
+    // for error com.android.build.api.transform.TransformException: com.android.builder.packaging.DuplicateFileException: Duplicate files copied in APK META-INF/LICENSE
+    packagingOptions {
+        exclude 'META-INF/NOTICE' // will not include NOTICE file
+        exclude 'META-INF/LICENSE' // will not include LICENSE file
+        exclude 'META-INF/DEPENDENCIES' // will not include DEPENDENCIES file
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile 'com.android.support:recyclerview-v7:25.4.0'
+    compile 'com.android.support:cardview-v7:25.4.0'
+    compile 'com.android.support:gridlayout-v7:25.4.0'
+    compile 'com.android.support:design:25.4.0'
+    compile 'com.github.clans:fab:1.6.4'
+    compile 'com.nineoldandroids:library:2.4.0'
+    // configurations android annotations
+    annotationProcessor 'org.androidannotations:androidannotations:4.3.1'
+    compile 'org.androidannotations:androidannotations-api:4.3.1'
+    // logger configurations
+    compile 'com.blankj:alog:1.5.0'
+    compile files('libs/achartengine-1.1.0.jar')
+    compile files('libs/xfastfactory.jar')
+    compile files('libs/baidumapapi_base_v4_0_0.jar')
+    compile files('libs/baidumapapi_cloud_v4_0_0.jar')
+    compile files('libs/baidumapapi_map_v4_0_0.jar')
+    compile files('libs/baidumapapi_radar_v4_0_0.jar')
+    compile files('libs/baidumapapi_search_v4_0_0.jar')
+    compile files('libs/baidumapapi_util_v4_0_0.jar')
+    compile files('libs/locSDK_6.13.jar')
+    compile files('libs/mid-sdk-2.3.jar')
+    compile files('libs/mta-android-stat-sdk-2.2.0_20160504.jar')
+    compile files('libs/zxing.jar')
+    compile project(path: ':library')
+}

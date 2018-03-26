@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_1"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
+                android:id="@+id/btn_gps"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/draw_bg_c_black"
+                android:drawableLeft="@drawable/ic_state_off"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="@string/gps_state"
+                android:textColor="@color/white"
+                android:textSize="25sp"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/draw_bg_black"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/gps_elevation"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+            <TextView
+                    android:id="@+id/tv_elevation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="5dp"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/float_default"
+                    android:textColor="@color/main_app"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/draw_bg_black"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+        <TextView
+                android:id="@+id/tv_star"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:singleLine="true"
+                android:text="@string/gps_star_count"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        <LinearLayout
+                android:id="@+id/layout_star"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"/>
+    </LinearLayout>
+
+    <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="0"
+            android:background="@drawable/draw_bg_black"
+            android:padding="5dp"
+            android:shrinkColumns="1"
+            android:stretchColumns="1">
+
+        <TableRow>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/gps_time"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+            <TextView
+                    android:id="@+id/tv_gps_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/time_default"
+                    android:textColor="@color/blue"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/gps_lon"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+            <TextView
+                    android:id="@+id/tv_lon"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/float_default"
+                    android:textColor="@color/blue"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/gps_lat"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+
+            <TextView
+                    android:id="@+id/tv_lat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="right|center_vertical"
+                    android:singleLine="true"
+                    android:text="@string/float_default"
+                    android:textColor="@color/blue"
+                    android:textSize="25sp"
+                    android:textStyle="bold"/>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

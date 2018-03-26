@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="unit_weight">
+        <item>克 (g)</item>
+        <item>公斤 (kg)</item>
+        <item>公吨 (t)</item>
+        <item>长吨 (long ton)</item>
+        <item>短吨 (short ton)</item>
+        <item>安士,盎司 (黄金用)</item>
+        <item>安士,盎司 (日常用)</item>
+        <item>磅 (lb)</item>
+        <item>金衡両</item>
+        <item>钱 (香港)</item>
+        <item>両 (香港)</item>
+        <item>斤 (香港)</item>
+        <item>担 (香港)</item>
+        <item>钱 (中国)</item>
+        <item>両 (中国)</item>
+        <item>斤 (中国)</item>
+        <item>両 (台湾)</item>
+        <item>斤 (台湾)</item>
+    </string-array>
+    <!-- 以克为标准量 -->
+    <string-array name="unit_weight_constant">
+        <item>1</item>
+        <item>1000</item>
+        <item>1000000</item>
+        <item>1016000</item>
+        <item>907000</item>
+        <item>31.1035</item>
+        <item>28.3495</item>
+        <item>453.5924</item>
+        <item>37.429</item>
+        <item>3.125</item>
+        <item>31.25</item>
+        <item>500</item>
+        <item>50000</item>
+        <item>5</item>
+        <item>50</item>
+        <item>500</item>
+        <item>37.5</item>
+        <item>600</item>
+    </string-array>
+    <string-array name="unit_length">
+        <item>毫英吋 (mil)</item>
+        <item>英吋 (in)</item>
+        <item>英呎 (ft)</item>
+        <item>巿尺</item>
+        <item>市寸</item>
+        <item>微米 (µm)</item>
+        <item>毫米 (mm)</item>
+        <item>厘米 (cm)</item>
+        <item>米 (m)</item>
+        <item>公里 (km)</item>
+        <item>海里 (n mile)</item>
+        <item>码 (yd)</item>
+        <item>哩 (mi)</item>
+    </string-array>
+    <!-- 以厘米为标准量 -->
+    <string-array name="unit_length_constant">
+        <item>0.00254</item>
+        <item>2.54</item>
+        <item>30.48</item>
+        <item>33.33</item>
+        <item>2.33</item>
+        <item>0.0001</item>
+        <item>0.1</item>
+        <item>1</item>
+        <item>100</item>
+        <item>100000</item>
+        <item>185200</item>
+        <item>91.44</item>
+        <item>160934.4</item>
+    </string-array>
+    <string-array name="unit_area">
+        <item>平方吋 (in²)</item>
+        <item>平方呎 (ft²)</item>
+        <item>平方毫米 (mm²)</item>
+        <item>平方厘米 (cm²)</item>
+        <item>平方米 (m²)</item>
+        <item>平方公里 (km²)</item>
+        <item>平方码 (yd²)</item>
+        <item>平方哩 (mi²)</item>
+        <item>坪 (台湾)</item>
+        <item>分 (台湾)</item>
+        <item>亩 (中国)</item>
+        <item>公顷 (ha)</item>
+        <item>公亩 (a)</item>
+        <item>英亩 (acre)</item>
+    </string-array>
+    <!-- 以平方米为标准量 -->
+    <string-array name="unit_area_constant">
+        <item>0.00065</item>
+        <item>0.0929</item>
+        <item>0.000001</item>
+        <item>0.0001</item>
+        <item>1</item>
+        <item>1000000</item>
+        <item>0.8361</item>
+        <item>2589988.1103</item>
+        <item>3.3058</item>
+        <item>66.67</item>
+        <item>666.6667</item>
+        <item>10000</item>
+        <item>100</item>
+        <item>4046.856</item>
+    </string-array>
+    <string-array name="unit_volume">
+        <item>毫升 (ml)</item>
+        <item>公升 (L)</item>
+        <item>茶匙(5ml)</item>
+        <item>汤匙(15ml)</item>
+        <item>安士 (oz 美国)</item>
+        <item>品脱 (pint 美国)</item>
+        <item>安士 (oz 英国)</item>
+        <item>品脱 (pint 英国)</item>
+        <item>立方毫米 (mm³)</item>
+        <item>立方厘米 (cm³)</item>
+        <item>立方米 (m³)</item>
+        <item>加仑 (gallon 美国)</item>
+        <item>加仑 (gallon 英国)</item>
+    </string-array>
+    <!-- 以毫升为标准量 -->
+    <string-array name="unit_volume_constant">
+        <item>1</item>
+        <item>1000</item>
+        <item>5</item>
+        <item>15</item>
+        <item>29.57</item>
+        <item>473.1765</item>
+        <item>28.41</item>
+        <item>568.2613</item>
+        <item>0.001</item>
+        <item>1</item>
+        <item>1000000</item>
+        <item>3785.4118</item>
+        <item>4546.0912</item>
+    </string-array>
+    <string-array name="unit_temperature">
+        <item>摄氏 (°C)</item>
+        <item>华氏 (°F)</item>
+        <item>开氏 (K)</item>
+    </string-array>
+    <!-- 以摄氏度为标准量 -->
+    <string-array name="unit_temperature_constant">
+        <item>1</item>
+        <item>0.029585799</item>
+        <item>0.003647638</item>
+    </string-array>
+    <string-array name="unit_power">
+        <item>瓦 (W)</item>
+        <item>千瓦 (kW)</item>
+        <item>兆瓦 (MW)</item>
+        <item>马力 (hp 英美)</item>
+        <item>马力 (ps 德日)</item>
+    </string-array>
+    <!-- 以瓦为标准量 -->
+    <string-array name="unit_power_constant">
+        <item>1</item>
+        <item>1000</item>
+        <item>1000000</item>
+        <item>745.6999</item>
+        <item>735.4988</item>
+    </string-array>
+    <string-array name="unit_speed">
+        <item>米/秒 (m/s)</item>
+        <item>公里/小时 (km/h)</item>
+        <item>英里/小时 (mph, mi/h)</item>
+        <item>光速 (c)</item>
+    </string-array>
+    <!-- 以米/秒为标准量 -->
+    <string-array name="unit_speed_constant">
+        <item>1</item>
+        <item>0.2778</item>
+        <item>0.447</item>
+        <item>299792458</item>
+    </string-array>
+    <string-array name="unit_pressure">
+        <item>帕斯卡 (Pa)</item>
+        <item>千帕 (kPa)</item>
+        <item>巴 (bar)</item>
+        <item>标准大气压 (atm)</item>
+        <item>毫米水柱</item>
+        <item>毫米汞柱</item>
+    </string-array>
+    <!-- 以帕为标准量 -->
+    <string-array name="unit_pressure_constant">
+        <item>1</item>
+        <item>1000</item>
+        <item>100000</item>
+        <item>101325</item>
+        <item>9.8</item>
+        <item>133.32</item>
+    </string-array>
+    <string-array name="unit_computer">
+        <item>bit(位)</item>
+        <item>Byte(字节)</item>
+        <item>KB(千字节)</item>
+        <item>MB(兆字节)</item>
+        <item>GB(吉字节)</item>
+        <item>TB(太字节)</item>
+    </string-array>
+    <!-- 以bit为标准量 -->
+    <string-array name="unit_computer_constant">
+        <item>1</item>
+        <item>8</item>
+        <item>8192</item>
+        <item>8388608</item>
+        <item>8388608000</item>
+        <item>8796093022208</item>
+    </string-array>
+
+
+    <!-- 天意感知 -->
+    <integer-array name="signal_div">
+        <item>-105</item>
+        <item>-95</item>
+        <item>-85</item>
+        <item>-75</item>
+        <item>-65</item>
+    </integer-array>
+    <integer-array name="ping_div">
+        <item>180</item>
+        <item>120</item>
+        <item>60</item>
+    </integer-array>
+    <integer-array name="speed_div">
+        <item>100</item>
+        <item>200</item>
+        <item>800</item>
+    </integer-array>
+
+    <string-array name="siteBusiNames">
+        <item>百度</item>
+        <item>搜狗</item>
+        <item>雅虎</item>
+        <item>优酷</item>
+        <item>爱奇艺</item>
+        <item>乐视网</item>
+        <item>淘宝</item>
+        <item>京东</item>
+        <item>亚马逊</item>
+        <item>新浪</item>
+        <item>网易</item>
+        <item>搜狐</item>
+    </string-array>
+
+    <string-array name="siteBusiUrls">
+        <item>http://www.baidu.com</item>
+        <item>http://www.sogou.com/</item>
+        <item>https://www.yahoo.com/</item>
+        <item>http://www.youku.com/</item>
+        <item>http://www.iqiyi.com/</item>
+        <item>http://www.letv.com/</item>
+        <item>http://m.taobao.com/</item>
+        <item>http://www.jd.com/</item>
+        <item>http://www.amazon.cn/</item>
+        <item>http://www.sina.com.cn/</item>
+        <item>http://www.163.com/</item>
+        <item>http://www.sohu.com/</item>
+    </string-array>
+
+    <string-array name="sitesBusiName">
+        <item>百度</item>
+        <item>乐视网</item>
+        <item>淘宝</item>
+        <item>新浪</item>
+        <item>网易</item>
+        <item>掌上营业厅</item>
+    </string-array>
+    <string-array name="sitesBusiUrls">
+        <item>http://www.baidu.com</item>
+        <item>http://www.letv.com/</item>
+        <item>http://www.taobao.com/</item>
+        <item>http://www.sina.com.cn/</item>
+        <item>http://www.163.com/</item>
+        <item>http://www.189.cn/client/</item>
+    </string-array>
+
+    <string-array name="sitenames">
+        <item>百度 </item>
+        <item>新浪微博</item>
+        <item>淘宝 </item>
+        <item>搜狐视频 </item>
+        <item>网易新闻</item>
+        <item>掌上营业厅</item>
+    </string-array>
+    <string-array name="siteurls">
+        <item>http://www.baidu.com</item>
+        <item>http://d.weibo.com/</item>
+        <item>http://m.taobao.com/</item>
+        <item>http://m.tv.sohu.com/</item>
+        <item>http://3g.163.com/touch/</item>
+        <item>http://wapyn.189.cn/WapHall2/index.html</item>
+    </string-array>
+    <string-array name="maps_type">
+        <item>地图模式</item>
+        <item>卫星模式</item>
+    </string-array>
+    <string-array name="ping_servers">
+        <item>www.baidu.com</item>
+        <item>www.qq.com</item>
+        <item>www.taobao.com</item>
+        <item>其他服务器</item>
+    </string-array>
+    <string-array name="ping_times">
+        <item>5</item>
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
+    </string-array>
+    <string-array name="traceroute_times">
+        <item>30</item>
+        <item>50</item>
+        <item>80</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="levels">
+        <item>差</item>
+        <item>中</item>
+        <item>良</item>
+        <item>优</item>
+    </string-array>
+    <string-array name="scenes">
+        <item>室内</item>
+        <item>室外</item>
+        <item>地下室</item>
+        <item>电梯</item>
+        <item>地铁</item>
+        <item>铁路</item>
+        <item>高速公路</item>
+        <item>郊外</item>
+    </string-array>
+    <string-array name="problems">
+        <item>无故障</item>
+        <item>单通（对方无法听到您的对话）</item>
+        <item>单通（您无法听到对方讲话）</item>
+        <item>无法上网</item>
+        <item>总掉到2G网络</item>
+        <item>无法连接4G网络</item>
+        <item>上网频繁掉线</item>
+        <item>网速慢</item>
+    </string-array>
+    <string-array name="BDSI_options">
+        <item>1、总体而言你对网络的满意程度</item>
+        <item>2、手机上网速度满意程度</item>
+        <item>3、手机网络稳定性满意程度</item>
+        <item>4、手机信号满意程度</item>
+    </string-array>
+
+    <string-array name="cdma_hd">
+        <item>133</item>
+        <item>153</item>
+        <item>177</item>
+        <item>180</item>
+        <item>181</item>
+        <item>189</item>
+    </string-array>
+
+    <string-array name="fourG_scenes">
+        <item>高下载速率</item>
+        <item>人有我优</item>
+        <item>人无我有</item>
+    </string-array>
+    <string-array name="fgcj">
+        <item>市区</item>
+        <item>县城</item>
+        <item>乡镇</item>
+        <item>行政村</item>
+        <item>5A景区</item>
+        <item>4A景区</item>
+        <item>3A景区</item>
+        <item>其他景区</item>
+        <item>校园</item>
+        <item>高铁线</item>
+        <item>高速</item>
+        <item>国道</item>
+        <item>其他交通干线</item>
+        <item>住宅小区</item>
+        <item>商业广场</item>
+        <item>工业园</item>
+    </string-array>
+    <string-array name="sbzs">
+        <item>CDMA</item>
+        <item>TD-LTE</item>
+        <item>LTE FDD</item>
+    </string-array>
+    <string-array name="build_type">
+        <item>预规划</item>
+        <item>规划</item>
+        <item>在建</item>
+        <item>开通</item>
+        <item>验收交维</item>
+    </string-array>
+
+    <string-array name="fgqylx">
+        <item>密集市区</item>
+        <item>市区</item>
+        <item>县城</item>
+        <item>郊区</item>
+        <item>平原农村</item>
+        <item>水域农村</item>
+        <item>丘陵农村</item>
+        <item>山区农村</item>
+        <item>城中村</item>
+    </string-array>
+    <string-array name="zzly">
+        <item>电信存量移交</item>
+        <item>移动存量移交</item>
+        <item>联通存量移交</item>
+        <item>铁塔新建锚定</item>
+        <item>铁塔新建共享</item>
+        <item>电信自有</item>
+        <item>共享联通</item>
+        <item>共享移动</item>
+        <item>共享其他</item>
+    </string-array>
+    <string-array name="zzlx">
+        <item>室外站</item>
+        <item>室分系统</item>
+        <item>WiFi热点</item>
+        <item>BBU机房</item>
+    </string-array>
+    <string-array name="zzzt">
+        <item>规划</item>
+        <item>交付</item>
+        <item>入网</item>
+        <item>交维</item>
+        <item>维护</item>
+        <item>网优</item>
+        <item>拆迁</item>
+    </string-array>
+    <string-array name="sfys">
+        <item>否</item>
+        <item>是</item>
+    </string-array>
+    <string-array name="jfcq">
+        <item>铁塔</item>
+        <item>电信</item>
+        <item>移动</item>
+        <item>联通</item>
+        <item>邮政</item>
+        <item>广电</item>
+        <item>公安</item>
+        <item>无房</item>
+        <item>其他</item>
+    </string-array>
+    <string-array name="twcq">
+        <item>铁塔公司产权</item>
+        <item>电信产权</item>
+        <item>联通产权</item>
+        <item>移动产权</item>
+    </string-array>
+    <string-array name="twlx">
+        <item>普通楼面塔</item>
+        <item>楼面抱杆</item>
+        <item>普通地面塔</item>
+        <item>地面简易塔</item>
+        <item>地面景观塔</item>
+    </string-array>
+    <string-array name="twgxxx">
+        <item>电信独享</item>
+        <item>与联通共享</item>
+        <item>与移动共享</item>
+        <item>三家共享</item>
+    </string-array>
+    <string-array name="gjdordhxx">
+        <item>有干接点</item>
+        <item>有动环监控</item>
+        <item>有干接点和动环监控</item>
+        <item>无</item>
+    </string-array>
+</resources>

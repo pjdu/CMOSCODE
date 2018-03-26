@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/draw_bg_opactiy"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/bg_round"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/gray"
+            android:gravity="center_vertical"
+            android:minHeight="60dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/tv_pop_loc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:minHeight="60dp"
+                android:singleLine="false"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btn_pop_show_map"
+                style="@style/btn_green"
+                android:layout_width="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="0"
+                android:padding="2dp"
+                android:text="@string/map_show" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_pop_close"
+                style="@style/btn_white"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="@string/common_cancel" />
+
+            <Button
+                android:id="@+id/btn_pop_getloc"
+                style="@style/btn_green"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:text="@string/get_lac" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

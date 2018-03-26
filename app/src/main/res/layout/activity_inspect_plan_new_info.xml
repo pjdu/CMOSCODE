@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/draw_bg_app"
+              android:orientation="vertical">
+    <include layout="@layout/toolbar"></include>
+
+
+    <TextView
+            android:id="@+id/tv_bsname"
+            style="@style/text_default"
+            android:layout_width="match_parent"
+            android:background="@drawable/draw_bg_group_normal"
+            android:gravity="left|center"
+            android:padding="5dp"
+            android:singleLine="false"
+            android:textStyle="bold"/>
+
+    <ScrollView
+            android:id="@+id/sv_itcontent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/layout_it"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+            </LinearLayout>
+            <TextView
+                    style="@style/text_title"
+                    android:layout_height="wrap_content"
+                    android:background="@color/black5"
+                    android:drawableLeft="@drawable/ic_br_next"
+                    android:gravity="left|center"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:text="@string/common_imgupload_file"/>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/draw_bg_list_round"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+
+                        <ImageView
+                                android:id="@+id/img_it_a0"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_margin="5dp"
+                                android:clickable="true"
+                                android:background="@android:drawable/ic_delete"
+                                android:contentDescription="@string/common_imgupload"/>
+
+                        <ProgressBar
+                                android:id="@+id/pb_state_0"
+                                style="?android:attr/progressBarStyleLarge"
+                                android:layout_margin="5dp"
+                                android:layout_width="50dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:layout_height="50dp"/>
+                        <TextView
+                                android:id="@+id/tv_state_0"
+                                style="@style/text_default"
+                                android:layout_gravity="bottom|center"
+                                android:text="@string/it_no_image"/>
+                    </FrameLayout>
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="false"
+                            android:gravity="center"
+                            android:text="@string/common_imgupload_name_1"
+                            android:textColor="@color/main_app"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+
+                        <ImageView
+                                android:id="@+id/img_it_a1"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_margin="5dp"
+                                android:clickable="true"
+                                android:background="@android:drawable/ic_delete"
+                                android:contentDescription="@string/common_imgupload"/>
+
+                        <ProgressBar
+                                android:id="@+id/pb_state_1"
+                                style="?android:attr/progressBarStyleLarge"
+                                android:layout_margin="5dp"
+                                android:layout_width="50dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:layout_height="50dp"/>
+                        <TextView
+                                android:id="@+id/tv_state_1"
+                                style="@style/text_default"
+                                android:layout_gravity="bottom|center"
+                                android:text="@string/it_no_image"/>
+                    </FrameLayout>
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="false"
+                            android:gravity="center"
+                            android:text="@string/common_imgupload_name_2"
+                            android:textColor="@color/main_app"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                    <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+
+                        <ImageView
+                                android:id="@+id/img_it_a2"
+                                android:layout_width="90dp"
+                                android:layout_height="90dp"
+                                android:layout_margin="5dp"
+                                android:clickable="true"
+                                android:background="@android:drawable/ic_delete"
+                                android:contentDescription="@string/common_imgupload"/>
+
+                        <ProgressBar
+                                android:id="@+id/pb_state_2"
+                                style="?android:attr/progressBarStyleLarge"
+                                android:layout_margin="5dp"
+                                android:layout_width="50dp"
+                                android:layout_gravity="center"
+                                android:visibility="gone"
+                                android:layout_height="50dp"/>
+                        <TextView
+                                android:id="@+id/tv_state_2"
+                                style="@style/text_default"
+                                android:layout_gravity="bottom|center"
+                                android:text="@string/it_no_image"/>
+                    </FrameLayout>
+                    <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="false"
+                            android:gravity="center"
+                            android:text="@string/common_imgupload_name_3"
+                            android:textColor="@color/main_app"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

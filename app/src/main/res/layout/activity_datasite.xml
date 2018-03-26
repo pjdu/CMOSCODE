@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:deezapps="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <LinearLayout style="@style/layout_title" >
+
+        <TextView
+            style="@style/text_title"
+            android:layout_weight="1"
+            android:text="@string/app_name" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="0"
+            android:background="@drawable/divi" />
+
+        <ImageButton
+            android:id="@+id/btn_more"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="1dp"
+            android:layout_weight="0"
+            android:background="@drawable/draw_btn_header"
+            android:contentDescription="@string/common_more"
+            android:src="@drawable/ic_more" />
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_black_item"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:stretchColumns="0,1,2,3" >
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/txt_page_0"
+                android:layout_width="match_parent"
+                android:layout_height="34dip"
+                android:gravity="center"
+                android:text="@string/datasite_inspection"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_page_1"
+                android:layout_width="match_parent"
+                android:layout_height="34dip"
+                android:gravity="center"
+                android:text="@string/datasite_site"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_page_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/datasite_knowledge"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txt_page_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/datasite_box"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <cn.com.chinaccs.widget.pager.PagerControl
+                android:id="@+id/control"
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:layout_marginBottom="2dp"
+                android:layout_span="4"
+                deezapps:roundRectRadius="0dip" />
+        </TableRow>
+    </TableLayout>
+
+    <cn.com.chinaccs.widget.pager.HorizontalPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <GridView
+            android:id="@+id/grid_inspect"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/draw_bg_app"
+            android:columnWidth="100dip"
+            android:gravity="center"
+            android:horizontalSpacing="5dip"
+            android:numColumns="3"
+            android:paddingTop="10dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dip" />
+
+        <GridView
+            android:id="@+id/grid_site"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/draw_bg_app"
+            android:columnWidth="100dip"
+            android:gravity="center"
+            android:horizontalSpacing="5dip"
+            android:numColumns="3"
+            android:paddingTop="10dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dip" />
+
+        <GridView
+            android:id="@+id/grid_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/draw_bg_app"
+            android:columnWidth="100dip"
+            android:gravity="center"
+            android:horizontalSpacing="5dip"
+            android:numColumns="3"
+            android:paddingTop="10dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dip" />
+
+        <GridView
+            android:id="@+id/grid_knowledge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/draw_bg_app"
+            android:columnWidth="100dip"
+            android:gravity="center"
+            android:horizontalSpacing="5dip"
+            android:numColumns="3"
+            android:paddingTop="10dp"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="10dip" />
+    </cn.com.chinaccs.widget.pager.HorizontalPager>
+
+</LinearLayout>

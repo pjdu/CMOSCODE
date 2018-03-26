@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:background="@drawable/custom_info_bubble"
+              android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/marker_title"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bsstate_bg"
+        android:singleLine="false"
+        android:textColor="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/siteinfoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/bsstate_bg"
+            android:onClick="showSiteInfoClick"
+            android:text="站址详情"/>
+
+        <Button
+            android:id="@+id/alarmInfoBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/bsstate_bg"
+            android:onClick="showAlarmInfoClick"
+            android:text="告警详情"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

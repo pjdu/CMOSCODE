@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="cn.com.chinaccs.datasite.main">
+
+    <!-- Dangerous Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <!-- Dangerous Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <!-- Normal Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <!-- Dangerous Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <!-- Normal Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <!-- Normal Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- Normal Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!-- Normal Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- Dangerous Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <!-- Dangerous Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- Normal Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- Dangerous Permission for 6.0 Permission Manager -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- 百度地图SDK 添加所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <!-- 百度地图SDK 添加所需权限 -->
+    <!--android:name="cn.com.chinaccs.datasite.main.ui.WelcomeActivity"-->
+
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+
+    <uses-permission android:name="android.permission.VIBRATE"/>
+
+
+    <!-- 二维码相关权限 -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature android:name="android.hardware.camera.flash"/>
+
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="com.android.browser.permission.READ_HISTORY_BOOKMARKS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name="cn.com.chinaccs.datasite.main.ui.MainApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.WelcomeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+       <!-- <activity
+            android:name=".ui.asset.AssetWelcomeActivity"
+            android:label="@string/asset_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.SearchActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!-- 无线建设 -->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteNewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.cmos.PhysicalSiteListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteNewEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteCheckActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteApplyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSitePayActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSitePayEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteNetInEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSitePayMainEditActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteNetOptActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteRemoveActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!-- 物理站址信息及告警信息 -->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteAlarmListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteAlarmInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--注册知识库，以及其中的子项-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.KnowledgeBaseActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.ProductMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.ProductModelIndexActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.ProductContentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.ProductOfferListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.ProductOfferActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.SystemNoticeListActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--技术问答-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.QAQuestionMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--QAQuestionMainACtivity技术问答里的子项-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.QAAnswerAcitivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.QAQuestionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.QAPersonalCenter"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.QAQuestionAnswerAcitivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.QAQuestionTiWenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--意见反馈-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.TMobileSuggestActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--注册工具箱和其中的子项-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.ToolboxActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.BoxConversionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.BoxCompassActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.BoxDowntiltActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.BoxMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.GPSConnActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--关于-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.AboutActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--修改密码-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.ChangePwdActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--检查更新-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.CheckActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--设置-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.SettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+
+        <!-- 网络感知模块 -->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.LteSignalMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.SignalInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--网络测速-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.SpeedActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.SpeedRecordsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.SpeedRecordsDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--网站测试-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.HttpTestActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.HttpTestRecordsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.HttpTestRecordsDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--视频测试-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.TestResultActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.VideoTestActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!-- 网络感知数据热力地图 -->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.lte.LteMapMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!-- ended网络感知模块 -->
+        <!--巡检签到-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.InspectSignActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--物理站址巡检-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.NewInspectBSActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.NewInspectPlanActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.InspectCellOptionActivity_newbs"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.SecutityHiddenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.InspectContentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.ContratsMapActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.InspectContentInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+
+
+        <!--巡检记录-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.InspectHistoryActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.InspectHistoryContentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.InspectImgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.InspectItemInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--资产清查-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.AssetsInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.AssetsContentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.AssetsCameraFlowActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.AssetsModifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.AssetsModifyAllActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.AssetsContentModifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.AssetsContentNewActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.AssetsItemActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.AssetsPhotoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.AssetsSingleImgActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.DSCommonSlideActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.SingleImgUploadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.CameraLoadActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--资产盘点-->
+        <activity
+            android:name=".ui.asset.AssetLoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.AssetMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.AssetSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.AssetScannerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.AssetResScannerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.AssetCardItemInfoActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.AssetCardQrConActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.AssetResItemInfoActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.AssetResQrConActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.AssetResAssInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!-- 移动网络类 -->
+        <activity
+            android:name=".ui.asset.mobile.MobileInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileConActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileItemActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileModifyActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".zbar.ScannerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileBTSActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileBTSConActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileRRUActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileRRUConActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileANTActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileANTConActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileCardsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileCardsConActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileCardsQrConActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileBasicConActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileTowerConActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileEngineConActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobilePowerActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobilePowerOnOffActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobilePowerBatteryActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobilePowerHeaterActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobilePowerDynamicActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobilePowerShockProofActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileTransferActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileTransferDeviceActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileTransferGeneralActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileLinkedCardsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileLinkedCardsConActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileConItemActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.mobile.MobileConItemInfoActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!-- 光网络类 -->
+        <activity
+            android:name=".ui.asset.optical.OpticalInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.optical.OpticalConInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.optical.OpticalConItemActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <activity
+            android:name=".ui.asset.optical.OpticalConItemInfoActivity_"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+        <!--新增站址验收、入网申请、验收交付的信息录入activity-->
+        <activity
+            android:name="cn.com.chinaccs.datasite.main.ui.cmos.PhysicalSiteChekApplyPayContentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize"/>
+
+
+        <service
+            android:name="cn.com.chinaccs.datasite.main.MessageService"
+            android:enabled="true"/>
+        <service
+            android:name="cn.com.chinaccs.datasite.main.gps.GpsService"
+            android:enabled="true"/>
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+
+        <!-- 生产环境 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="GgOWYEr3sA3QKflw7HkIWGcC"/>
+        <!--测试环境2-->
+        <!--         <meta-data
+                     android:name="com.baidu.lbsapi.API_KEY"
+                     android:value="tAmuPcPSF1GDURpeKibSCN3jRqMm0DhM" />-->
+        <!--视频录制用的不同包名的key-->
+        <!--        <meta-data
+                    android:name="com.baidu.lbsapi.API_KEY"
+                    android:value="5COjG4H9aUjhz3V1xQEFGxsxQcwCkW0E"/>-->
+        <!-- 请将value改为腾讯移动统计MTA分配的appkey < -->
+        <meta-data
+            android:name="TA_APPKEY"
+            android:value="AVETFE4V141P"/>
+        <meta-data
+            android:name="InstallChannel"
+            android:value="cloud98"/>
+
+    </application>
+
+</manifest>

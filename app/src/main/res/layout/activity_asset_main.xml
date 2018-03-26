@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by AndyHua on 2017/10/20.
+  ~ Copyright © 2017年 ytf. All rights reserved.
+  ~
+  ~ Last Modified on 2017-10-20 11:00:58.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/user_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF8200"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            android:src="@mipmap/main_user"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="用户"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:text="账号"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="8dp"
+        android:src="@drawable/icon_setting"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/user_layout"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/assetMobile"
+            android:layout_width="0dp"
+            android:layout_height="196dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@mipmap/main_yidongwangluo"/>
+
+        <ImageView
+            android:id="@+id/assetOptical"
+            android:layout_width="0dp"
+            android:layout_height="196dp"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@mipmap/main_guangwangluo"/>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/scanBarBtn"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_margin="32dp"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/ic_barcode"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        app:borderWidth="0dp"
+        android:scaleType="center"
+        app:fab_size="normal"
+        app:backgroundTint="#FF8200"
+        app:rippleColor="#33728dff"
+        app:elevation="8dp"
+        app:pressedTranslationZ="16dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:textSize="16sp"
+        android:text="扫一扫"/>
+</RelativeLayout>

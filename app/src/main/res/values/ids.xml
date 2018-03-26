@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by AndyHua on 2017/8/22.
+  ~ Copyright © 2017年 ytf. All rights reserved.
+  ~
+  ~ Last Modified on 2017-08-19 15:22:50.
+  -->
+
+<resources>
+    <item type="id" name="menu_flash" />
+    <item type="id" name="menu_auto_focus" />
+    <item type="id" name="menu_formats" />
+</resources>
